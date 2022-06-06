@@ -1,4 +1,11 @@
-# U6143_ssd1306
+# pi-rack-oled (U6143_ssd1306)
+
+This version extends the work of [darkgrue](https://github.com/darkgrue/U6143_ssd1306) and makes the following additions:
+
+* Displays hostname instead of IP address
+* Top row is never deleted
+* Adds recent PRs from the master Uctronics branch
+
 
 ##  I2C
 Begin by enabling the I2C interface:
@@ -13,12 +20,12 @@ Install Git and library dependencies
 
 ```bash
 sudo apt update
-sudo apt install git wiringpi
+sudo apt install git 
 ```
 
 ##  Clone U6143_ssd1306 library 
 ```bash
-git clone https://github.com/UCTRONICS/U6143_ssd1306.git
+git clone https://github.com/davidjbradshaw/U6143_ssd1306.git
 ```
 
 ## Compile 
