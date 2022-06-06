@@ -14,14 +14,18 @@
 #include <net/if.h>        // if
 #include <unistd.h>        // close, sleep, usleep
 #include <arpa/inet.h>     // inet_ntoa
+#include <limits.h>
 
 int i2cfd;
+char hostname[HOST_NAME_MAX + 1];
 
 /*
 * Init SSD1306
 */
 void ssd1306_begin(unsigned int vccstate, unsigned int i2caddr)
 {
+  gethostname(hostname, HOST_NAME_MAX + 1);
+
   // I2C init
   i2cfd = open("/dev/i2c-1", O_RDWR);
   if (i2cfd < 0)
@@ -515,7 +519,8 @@ void LCD_DisplayTemperature(void)
   OLED_ClearLint(2, 4);
   OLED_DrawPartBMP(0, 2, 128, 4, BMP, 0);
 
-  OLED_ShowString(8, 0, ip, 8);        // Display IP address
+//  OLED_ShowString(8, 0, ip, 8);        // Display IP address
+  OLED_ShowString(0, 0, hostname, 8);  // Display HostName 
   OLED_ShowString(48, 3, temp, 8);     // Display CPU temperature
   OLED_ShowString(85, 3, cpu_perc, 8); // Display CPU load
 }
