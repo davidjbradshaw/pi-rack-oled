@@ -23,14 +23,14 @@ sudo apt update
 sudo apt install git 
 ```
 
-##  Clone U6143_ssd1306 library 
+##  Clone project 
 ```bash
-git clone https://github.com/davidjbradshaw/U6143_ssd1306.git
+git clone https://github.com/davidjbradshaw/pi-rack-oled.git
 ```
 
 ## Compile 
 ```bash
-cd U6143_ssd1306/C
+cd pi-rack-oled/C
 ```
 ```bash
 make clean && make 
