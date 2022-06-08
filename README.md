@@ -1,10 +1,20 @@
 # pi-rack-oled (U6143_ssd1306)
 
-This version extends the work of [darkgrue](https://github.com/darkgrue/U6143_ssd1306) and makes the following additions:
+This version extends the work of [darkgrue](https://github.com/darkgrue/U6143_ssd1306) and [Gosherm](https://github.com/Gosherm/U6143_ssd1306), it provides the following features over the original Uctronics version:
 
 * Displays hostname instead of IP address
 * Top row is never deleted
-* Adds recent PRs from the master Uctronics branch
+* Correctly display CPU temperature units of measurement
+* Added `/proc/stat` CPU calculation and enabled in favor of `top` (should be more accurate)
+* Added `df` disk free space calculation and enabled in favor of `statfs()` (should be more portable)
+* Refactored the way numbers were being pushed to the display that should result in better formatting
+  * Fit decimals by width using significant figures
+  * Right-justify fields (against labels)
+* Fixed `-Wall` compiler warnings
+* More robust error handling
+* Added `/contrib` directory, support scripts
+  * script to tar up files
+  * systemd service script
 
 
 ##  I2C
