@@ -41,8 +41,6 @@ git clone https://github.com/davidjbradshaw/pi-rack-oled.git
 ## Compile 
 ```bash
 cd pi-rack-oled/C
-```
-```bash
 make clean && make 
 ```
 
@@ -61,7 +59,7 @@ sudo cp ./display /usr/local/bin/
 Choose one of the following configuration options (`systemd` **or** `rc.local`):
  
 ```bash
-sudo cp ./contrib/U6143_ssd1306.service /etc/systemd/system/
+sudo cp ../contrib/U6143_ssd1306.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable U6143_ssd1306.service
 sudo systemctl start U6143_ssd1306.service
