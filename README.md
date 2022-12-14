@@ -82,21 +82,3 @@ Reboot your system:
 ```bash
 sudo reboot now
 ```
-
-## For older 0.91 inch LCD without MCU 
-For the older version LCD without MCU controller, you can use the Python demo.
-
-Install the dependent library files:
-
-```bash
-sudo apt update
-sudo apt install python3-pil python3-pip
-sudo pip3 install adafruit-circuitpython-ssd1306
-```
-
-Test demo:
-
-```bash 
-cd U6143_ssd1306/python 
-sudo python3 ssd1306_stats.py
-```
