@@ -30,7 +30,7 @@ Install Git and library dependencies
 
 ```bash
 sudo apt update
-sudo apt install git 
+sudo apt install git -y
 ```
 
 ##  Clone project 
